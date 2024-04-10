@@ -19,7 +19,7 @@
 * [r/neovim](https://www.reddit.com/r/neovim/)
 
 ## Notes you should take:
-* NeoVim version >= 0.8 (mine is 0.9.5) click here ➡️  [download](https://github.com/neovim/neovim/releases)
+* NeoVim version >= 0.8 (mine is 0.9.5), I would recommend you to go for version 0.9 or above, click here ➡️  [download](https://github.com/neovim/neovim/releases)
 * file structure matters
 * you should know what you are doing
 
