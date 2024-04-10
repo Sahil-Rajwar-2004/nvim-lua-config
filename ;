@@ -1,0 +1,11 @@
+# NVIM Config with LUA
+
+### ***I mean pure LUA***
+
+### plugins src:
+
+1. [packer.nvim](https://github.com/wbthomason/packer.nvim)
+2. [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+4. [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
+3. [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+4. [nvim-lualine/neovim](https://github.com/nvim-lualine/lualine.nvim)
