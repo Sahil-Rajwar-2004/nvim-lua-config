@@ -1,4 +1,4 @@
-# NVIM Config with LUA
+# NeoVim Config with LUA
 
 ### ***I mean pure LUA***
 
