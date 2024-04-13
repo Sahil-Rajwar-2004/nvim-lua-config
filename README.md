@@ -2,6 +2,28 @@
 
 ### ***I mean pure LUA***
 
+## ***Installation***
+### Asumming that you already have NeoVim version >= 0.8 or above
+1. you need to intall `packer.nvim` (required) source: [wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim?tab=readme-ov-file#quickstart)
+    
+2. clone this repo
+
+    ```bash
+    git clone "https://github.com/Sahil-Rajwar-2004/nvim-lua-config.git" ~/.config/nvim
+    ```
+
+3. remove `.git` file
+
+    ```bash
+    rm -fr .git
+    ```
+
+4. now your nvim is ready!
+    ```bash
+    nvim
+    ```
+
+
 ### plugins src:
 1. package manager: [wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim)
 2. file navigation: [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
