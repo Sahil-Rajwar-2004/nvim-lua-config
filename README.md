@@ -2,6 +2,13 @@
 
 ### ***I mean pure LUA***
 
+
+## Notes you should take:
+* NeoVim version >= 0.8 (mine is 0.9.5), I would recommend you to go for version 0.9 or above, click here 👉 [download](https://github.com/neovim/neovim/releases)
+* file structure matters
+* you should know what you are doing
+
+
 ## ***Installation***
 ### Asumming that you already have NeoVim version >= 0.8 or above
 1. you need to install `packer.nvim` (required) source 👉 [wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim?tab=readme-ov-file#quickstart)
@@ -43,11 +50,6 @@ and many more
 ### other resources:
 * [ThePrimeagen](https://www.youtube.com/watch?v=w7i4amO_zaE)
 * [r/neovim](https://www.reddit.com/r/neovim/)
-
-## Notes you should take:
-* NeoVim version >= 0.8 (mine is 0.9.5), I would recommend you to go for version 0.9 or above, click here 👉 [download](https://github.com/neovim/neovim/releases)
-* file structure matters
-* you should know what you are doing
 
 there are many more plugins available in the market, search a bit, you'll find more plugins
 you can show your some creativity while configuring your own neovim, its fun believe me
