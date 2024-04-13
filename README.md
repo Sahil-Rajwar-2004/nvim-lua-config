@@ -4,7 +4,7 @@
 
 ## ***Installation***
 ### Asumming that you already have NeoVim version >= 0.8 or above
-1. you need to intall `packer.nvim` (required) source 👉 [wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim?tab=readme-ov-file#quickstart)
+1. you need to isntall `packer.nvim` (required) source 👉 [wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim?tab=readme-ov-file#quickstart)
     
 2. clone this repo
 
