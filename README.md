@@ -4,7 +4,7 @@
 
 ## ***Installation***
 ### Asumming that you already have NeoVim version >= 0.8 or above
-1. you need to intall `packer.nvim` (required) source: [wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim?tab=readme-ov-file#quickstart)
+1. you need to intall `packer.nvim` (required) source 👉 [wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim?tab=readme-ov-file#quickstart)
     
 2. clone this repo
 
@@ -18,7 +18,7 @@
     rm -fr .git
     ```
 
-4. now your nvim is ready!
+4. now your nvim is ready! 👍
     ```bash
     nvim
     ```
@@ -45,7 +45,7 @@ and many more
 * [r/neovim](https://www.reddit.com/r/neovim/)
 
 ## Notes you should take:
-* NeoVim version >= 0.8 (mine is 0.9.5), I would recommend you to go for version 0.9 or above, click here ➡️  [download](https://github.com/neovim/neovim/releases)
+* NeoVim version >= 0.8 (mine is 0.9.5), I would recommend you to go for version 0.9 or above, click here 👉 [download](https://github.com/neovim/neovim/releases)
 * file structure matters
 * you should know what you are doing
 
