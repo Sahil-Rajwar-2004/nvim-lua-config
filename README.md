@@ -43,6 +43,8 @@
      :PackerSync
      ```
 
+6. reopen your neovim and everything should work fine  👍
+
 ### plugins src:
 1. package manager: [wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim)
 2. file navigation: [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
