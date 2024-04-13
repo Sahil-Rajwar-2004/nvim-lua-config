@@ -12,7 +12,11 @@
 6. kanagawa colorscheme: [rebelot/kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim)
 7. gruvbox colorscheme: [morhetz/gruvbox](https://github.com/morhetz/gruvbox)
 8. tokyonight colorscheme: [folke/tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
-
+9. indentation line: [lukas-reineke](https://github.com/lukas-reineke/indent-blankline.nvim)
+10. floating cmd line: [VonHeikemen/fine-cmdline.nvim](https://github.com/VonHeikemen/fine-cmdline.nvim)
+11. floating search box: [VonHeikemen/searhcbox.nvim](https://github.com/VonHeikemen/searchbox.nvim)
+12. nui: [MunifTanjim/nui.nvim](https://github.com/MunifTanjim/nui.nvim)
+and many more
 
 ### other resources:
 * [ThePrimeagen](https://www.youtube.com/watch?v=w7i4amO_zaE)
