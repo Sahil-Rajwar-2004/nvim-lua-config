@@ -6,6 +6,7 @@
 ## Notes you should take:
 * NeoVim version >= 0.8 (mine is 0.9.5), I would recommend you to go for version 0.9 or above, click here 👉 [download](https://github.com/neovim/neovim/releases)
 * file structure matters
+* If you stuck read the documentation
 * you should know what you are doing
 
 
@@ -25,11 +26,22 @@
     rm -fr .git
     ```
 
-4. now your nvim is ready! 👍
+4. navigate to your lua/core/packer.lua 👍
     ```bash
-    nvim
+    nvim ~/.config/nvim/lua/core/packer.lua
     ```
 
+5. use these commands to install `plugins`, `keymaps`, `colorschemes` and other configurations
+     
+     source the file
+     ```bash
+     :so
+     ```
+
+     install necessary configurations
+     ```bash
+     :PackerSync
+     ```
 
 ### plugins src:
 1. package manager: [wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim)
