@@ -59,6 +59,7 @@
 10. floating cmd line: [VonHeikemen/fine-cmdline.nvim](https://github.com/VonHeikemen/fine-cmdline.nvim)
 11. floating search box: [VonHeikemen/searhcbox.nvim](https://github.com/VonHeikemen/searchbox.nvim)
 12. nui: [MunifTanjim/nui.nvim](https://github.com/MunifTanjim/nui.nvim) 
+
 and many more
 
 ### other resources:
