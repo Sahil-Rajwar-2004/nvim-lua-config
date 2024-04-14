@@ -1,3 +1,24 @@
+vim.api.nvim_set_hl(0, "TelescopePrompt", {
+	fg = "#FFA500", -- Gold foreground color for the prompt
+	bg = "#1E1E1E", -- Dark background color for the prompt
+	bold = true, -- Optional: make the text bold
+})
+
+vim.api.nvim_set_hl(0, "TelescopeResults", {
+	fg = "#FFA500", -- Green foreground color for the results
+	bg = "#1E1E1E", -- Dark background color for the result
+})
+
+vim.api.nvim_set_hl(0, "TelescopePreview", {
+	fg = "#FFA500", -- White foreground color for the preview
+	bg = "#1E1E1E", -- Dark background color for the preview
+})
+
+vim.api.nvim_set_hl(0, "TelescopeSelection", {
+	fg = "#FFA500", -- Blue foreground color for the selection
+	bg = "#1E1E1E", -- Dark background color for the selection
+})
+
 local builtin = require("telescope.builtin")
 
 require("telescope").setup({
@@ -5,8 +26,14 @@ require("telescope").setup({
 		file_ignore_patterns = {},
 		path_display = { "truncate" },
 		layout_config = {
-			horizontal = { preview_width = 0.5 },
-			vertical = { width = 0.9 },
+			horizontal = {
+				preview_width = 1,
+				border = "rounded",
+			},
+			vertical = {
+				width = 1,
+				border = "rounded",
+			},
 		},
 		mappings = {
 			i = {

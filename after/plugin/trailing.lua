@@ -1,8 +1,8 @@
 vim.g.better_whitespace_enabled = 1
 vim.g.strip_whitespace_on_save = 1
 vim.g.strip_whitespace_confirm = 0
-vim.g.better_whitespace_ctermcolor = "red"
-vim.g.better_whitespace_guicolor = "#FF0000"
+vim.g.better_whitespace_ctermcolor = "cyan"
+vim.g.better_whitespace_guicolor = "#00FFFF"
 vim.g.better_whitespace_filetypes_blacklist = { "markdown", "json" }
 vim.g.better_whitespace_ansi_esc = 0
 

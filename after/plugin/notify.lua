@@ -13,7 +13,7 @@ notify.setup({
 		INFO = "",
 		DEBUG = "",
 	},
-	render = "default", -- Choose between "default", "minimal", and "compact" styles
+	render = "compact", -- Choose between "default", "minimal", and "compact" styles
 })
 
 vim.notify = notify

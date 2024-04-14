@@ -16,6 +16,16 @@ return require("packer").startup(function(use)
 			require("nvim-web-devicons").setup()
 		end,
 	})
+
+	use({
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v3.x",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons",
+			"MunifTanjim/nui.nvim",
+		},
+	})
 	--[[
     use {
         "nvim-neo-tree/neo-tree.nvim",
@@ -29,6 +39,8 @@ return require("packer").startup(function(use)
     ]]
 	--
 
+	use("tpope/vim-fugitive")
+
 	use({
 		"nvim-lualine/lualine.nvim",
 		requires = { "nvim-tree/nvim-web-devicons", opt = true },
@@ -36,10 +48,22 @@ return require("packer").startup(function(use)
 
 	use("lukas-reineke/indent-blankline.nvim")
 
+	use("folke/neodev.nvim")
+
+	use("folke/neoconf.nvim")
+
 	use({
 		"VonHeikemen/fine-cmdline.nvim",
 		requires = {
 			{ "MunifTanjim/nui.nvim" },
+		},
+	})
+
+	use({
+		"pmizio/typescript-tools.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"neovim/nvim-lspconfig",
 		},
 	})
 
@@ -56,9 +80,9 @@ return require("packer").startup(function(use)
 
 	use("folke/noice.nvim")
 
-	use("ntpeters/vim-better-whitespace")
-
 	use("ThePrimeagen/harpoon")
+
+	use("ntpeters/vim-better-whitespace")
 
 	use({
 		"VonHeikemen/lsp-zero.nvim",
@@ -72,7 +96,7 @@ return require("packer").startup(function(use)
 			{ "hrsh7th/cmp-path" },
 			{ "hrsh7th/nvim-cmp" },
 			{ "saadparwaiz1/cmp_luasnip" },
-			{ "L3MON4D3/LuaSnip" },
+			{ "L3MON4D3/LuaSnip", run = "make install_jsregexp" },
 			{ "rafamadriz/friendly-snippets" },
 		},
 	})
