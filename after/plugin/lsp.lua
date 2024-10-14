@@ -1,80 +1,75 @@
-local lsp_zero = require("lsp-zero")
-local cmp = require("cmp")
-local lspconfig = require("lspconfig")
-local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
-local luasnip = require("luasnip")
+local cmp = require'cmp'
+local lspconfig = require'lspconfig'
+local lspkind = require('lspkind')
+require("mason").setup()
 
-lsp_zero.on_attach(function(client, bufnr)
-	lsp_zero.default_keymaps({ buffer = bufnr })
-end)
+
+
+require("mason-lspconfig").setup({
+    ensure_installed = { "clangd", "rust_analyzer" } -- List servers you want installed
+})
+
+require("mason-lspconfig").setup_handlers({
+    function (server_name)
+        require("lspconfig")[server_name].setup{}
+    end,
+})
+
+
 
 cmp.setup({
-	snippet = {
-		expand = function(args)
-			luasnip.lsp_expand(args.body)
-		end,
-	},
-	mapping = {
-		["<Return>"] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.confirm({ select = true })
-			elseif luasnip.expand_or_jumpable() then
-				luasnip.expand_or_jump()
-			else
-				fallback()
-			end
-		end, { "i", "s" }),
-		["<C-Down>"] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_next_item()
-			else
-				fallback()
-			end
-		end, { "i", "s" }),
-
-		["<C-Up>"] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_prev_item()
-			else
-				fallback()
-			end
-		end, { "i", "s" }),
-	},
-	sources = {
-		{ name = "nvim_lsp" },
-		{ name = "luasnip" },
-	},
+  snippet = {
+    expand = function(args)
+      require('luasnip').lsp_expand(args.body)
+    end,
+  },
+  mapping = cmp.mapping.preset.insert({
+    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.abort(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item.
+  }),
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
+  }, {
+    { name = 'buffer' },
+  }),
+  formatting = {
+    format = lspkind.cmp_format({
+      mode = 'symbol_text',  -- Show symbol and text
+      maxwidth = 50,         -- Limit width of completion popup
+      ellipsis_char = '...', -- Show ellipsis if the name is too long
+    })
+  }
 })
 
-vim.api.nvim_create_autocmd("LspAttach", {
-	desc = "LSP actions",
-	callback = function(event)
-		vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", { buffer = event.buf })
-		vim.keymap.set("n", "<C-d>", "<cmd>lua vim.lsp.buf.definition()<cr>", { buffer = event.buf })
-		vim.keymap.set("n", "<leader>vd", "<cmd>lua vim.lsp.buf.openfloat()<cr>", { buffer = event.buf })
-		vim.keymap.set("n", "<leader>[d", "<cmd>lua vim.diagnostic.goto_next()<cr>", { buffer = event.buf })
-		vim.keymap.set("n", "<leader>]d", "<cmd>lua vim.diagnostic.goto_prev()<cr>", { buffer = event.buf })
-	end,
-})
+-- Set up the LSP server with nvim-cmp
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-vim.diagnostic.config({
-	signs = {
-		error = "✗",
-		warn = "⚠️",
-		hint = "",
-		info = "i",
-	},
-	float = {
-		source = "always",
-	},
-})
+lspconfig.clangd.setup{
+  capabilities = capabilities
+}
 
-lspconfig.pyright.setup({ capabilities = lsp_capabilities })
-lspconfig.rust_analyzer.setup({ capabilities = lsp_capabilities })
-lspconfig.clangd.setup({ capabilities = lsp_capabilities })
-lspconfig.eslint.setup({ capabilities = lsp_capabilities })
-lspconfig.markdown_oxide.setup({ capabilities = lsp_capabilities })
-lspconfig.vimls.setup({ capabilities = lsp_capabilities })
-require("typescript-tools").setup({ capabilites = lsp_capabilities })
+lspconfig.rust_analyzer.setup{
+  capabilities = capabilities
+}
 
-lsp_zero.setup({})
+
+local on_attach = function(_, bufnr)
+  local opts = { noremap=true, silent=true }
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-d>', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-k>', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+end
+
+require'lspconfig'.clangd.setup{
+  on_attach = on_attach
+}
+
+require'lspconfig'.rust_analyzer.setup {
+  capabilities = capabilities,
+}
+
