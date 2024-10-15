@@ -31,13 +31,15 @@ vim.api.nvim_set_keymap('n', 'W', '<C-w>k', { noremap = true, silent = true })  
 vim.api.nvim_set_keymap('n', 'S', '<C-w>j', { noremap = true, silent = true })                                                                -- Move down
 vim.api.nvim_set_keymap('n', 'A', '<C-w>h', { noremap = true, silent = true })                                                                -- Move left
 vim.api.nvim_set_keymap('n', 'D', '<C-w>l', { noremap = true, silent = true })                                                                -- Move right
-vim.api.nvim_set_keymap('n', '<C-W>', ':resize +2<CR>', { noremap = true, silent = true })                                                    -- Expand height
-vim.api.nvim_set_keymap('n', '<C-S>', ':resize -2<CR>', { noremap = true, silent = true })                                                    -- Contract height
-vim.api.nvim_set_keymap('n', '<C-A>', ':vertical resize -2<CR>', { noremap = true, silent = true })                                           -- Contract width
-vim.api.nvim_set_keymap('n', '<C-D>', ':vertical resize +2<CR>', { noremap = true, silent = true })                                           -- Expand width
+vim.api.nvim_set_keymap('n', '<C-j>', ':resize +2<CR>', { noremap = true, silent = true })                                                    -- Expand height
+vim.api.nvim_set_keymap('n', '<C-k>', ':resize -2<CR>', { noremap = true, silent = true })                                                    -- Contract height
+vim.api.nvim_set_keymap('n', '<C-h>', ':vertical resize -2<CR>', { noremap = true, silent = true })                                           -- Contract width
+vim.api.nvim_set_keymap('n', '<C-l>', ':vertical resize +2<CR>', { noremap = true, silent = true })                                           -- Expand width
 
 
 -- Themes
 vim.cmd.background = "dark"
 vim.cmd.colorscheme("kanagawa-dragon")
+
+
 
