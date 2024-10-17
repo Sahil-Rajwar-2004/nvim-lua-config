@@ -10,8 +10,8 @@ vim.opt.cursorline = true                                                       
 vim.opt.termguicolors = true                                                                                                                  -- Enable true color support
 vim.opt.mouse = ""                                                                                                                            -- Disable mouse use only keyboard
 vim.g.mapleader = " "                                                                                                                         -- Set leader key to space
-vim.g.netrw_banner = 0
-vim.g.netrw_liststyle = 3
+vim.g.netrw_banner = 0                                                                                                                        -- Netrw banner disabled
+vim.g.netrw_liststyle = 3                                                                                                                     -- Show NerdTree like structure
 vim.o.guicursor = ""                                                                                                                          -- Set cursor to block cursor
 
 
