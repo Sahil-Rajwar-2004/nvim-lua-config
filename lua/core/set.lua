@@ -10,6 +10,8 @@ vim.opt.cursorline = true                                                       
 vim.opt.termguicolors = true                                                                                                                  -- Enable true color support
 vim.opt.mouse = ""                                                                                                                            -- Disable mouse use only keyboard
 vim.g.mapleader = " "                                                                                                                         -- Set leader key to space
+vim.g.netrw_banner = 0
+vim.g.netrw_liststyle = 3
 vim.o.guicursor = ""                                                                                                                          -- Set cursor to block cursor
 
 
@@ -17,7 +19,7 @@ vim.o.guicursor = ""                                                            
 vim.api.nvim_set_keymap('n', '<leader>hl', ':nohlsearch<CR>', { noremap = true, silent = true })                                              -- Disable search Highlight
 vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', { noremap = true, silent = true })                                                        -- Save with <leader>w
 vim.api.nvim_set_keymap('n', '<leader>q', ':q<CR>', { noremap = true, silent = true })                                                        -- Quit with <leader>q
-vim.api.nvim_set_keymap('n', '<leader>pv', ':Ex<CR>', { noremap = true, silent = true })                                                      -- Open File Explorer in TUI form
+vim.api.nvim_set_keymap('n', '<leader>e', ':Ex<CR>', { noremap = true, silent = true })                                                      -- Open File Explorer in TUI form
 vim.api.nvim_set_keymap('n', '<A-Up>', ':m .-2<CR>==', { noremap = true, silent = true })                                                     -- Shift line to Up in normal mode
 vim.api.nvim_set_keymap('n', '<A-Down>', ':m .+1<CR>==', { noremap = true, silent = true })                                                   -- Shift line to Down in normal mode
 vim.api.nvim_set_keymap('v', '<A-Up>', ":m '<-2<CR>gv=gv", { noremap = true, silent = true })                                                 -- Shift line to Up in visual mode
@@ -40,6 +42,3 @@ vim.api.nvim_set_keymap('n', '<C-l>', ':vertical resize +2<CR>', { noremap = tru
 -- Themes
 vim.cmd.background = "dark"
 vim.cmd.colorscheme("kanagawa-dragon")
-
-
-
