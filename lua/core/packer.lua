@@ -29,6 +29,12 @@ return require('packer').startup(function(use)
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use { "nvim-telescope/telescope.nvim", tag = "0.1.8" }
   use {
+    'folke/zen-mode.nvim',
+    config = function()
+      require('zen-mode').setup({})
+    end
+  }
+  use {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
     config = function()
