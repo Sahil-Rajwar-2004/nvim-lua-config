@@ -72,6 +72,7 @@
 - [nyoom-engineering/oxocarbon.nvim](https://github.com/nyoom-engineering/oxocarbon.nvim)
 - [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+- [folke/zen-mode.nvim](https://github.com/folke/zen-mode.nvim)
 - [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)
 
 and many more
